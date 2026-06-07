@@ -1,0 +1,238 @@
+/* Hero */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.hero {
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+.heroTitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.heroSubtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  max-width: 500px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.color {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.colorLabel {
+  font-weight: 600;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.colorControls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.colorPicker {
+  width: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Botones */
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btnSecondary:hover {
+  background-color: #646cff;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(100, 108, 255, 0.2);
+}
+
+.btnSecondary:active {
+  transform: scale(0.98);
+}
+
+.btnReset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f3f5;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnReset:hover {
+  background-color: #fae5e5;
+  color: #e03131;
+  border-color: #ffc9c9;
+}
+
+.btnReset:active {
+  transform: scale(0.98);
+}
+
+/* Cards */
+.sectionTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-text);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.cardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.cardDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.homeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.qrForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1.5rem;
+}
+
+.qrInput{
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.qrInput:focus{
+  border-color: #646cff;
+}
+
+.qrResult{
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 256px;
+  min-height: 256px;
+}
+
+.qrPlaceholder{
+  color: #888;
+  font-size: 0.9rem;
+  max-width: 200px;
+}
+
+.qrButton{
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.qrButton:hover:not(:disabled){
+  background-color: #535bf2;
+}
+
+.qrButton:disabled{
+  background-color: #ccc;
+  cursor: not-allowed;
+}

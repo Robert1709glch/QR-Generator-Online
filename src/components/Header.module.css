@@ -1,0 +1,115 @@
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logoIcon {
+  font-size: var(--font-size-xl);
+}
+
+.logoText {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.navLink {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-light);
+  transition: color var(--transition);
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+/* Botón hamburguesa */
+.menuButton {
+  display: none;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.menuIcon {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  position: relative;
+  transition: background var(--transition);
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  position: absolute;
+  transition: transform var(--transition);
+}
+
+.menuIcon::before { top: -7px; }
+.menuIcon::after  { top:  7px; }
+
+.menuIconOpen { background-color: transparent; }
+.menuIconOpen::before { transform: translateY(7px) rotate(45deg); }
+.menuIconOpen::after  { transform: translateY(-7px) rotate(-45deg); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+}
