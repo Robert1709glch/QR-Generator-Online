@@ -5,6 +5,12 @@ codigo QR en tiempo real al agregar texto
 
 ---
 
+## Vista de la pagina
+
+link de la página: [QR Online Web](https://qr-online-web.netlify.app/)
+
+---
+
 ## Tecnologias que se usaron
 
 - **React 18** (Functional Components & Hooks: `useState`, `useRef`)
