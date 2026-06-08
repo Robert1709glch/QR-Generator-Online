@@ -10,7 +10,7 @@ function App() {
         <Home />
       </main>
       <footer className="footer">
-        <p>© 2026 Mi App de QR — Hecho con ❤️</p>
+        <p>© 2026 Mi App de QR</p>
       </footer>
     </div>
   )

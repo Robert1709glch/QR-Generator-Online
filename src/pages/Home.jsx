@@ -102,7 +102,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Cards informativas */}
+      {/* Cards de historial */}
       <section className={styles.cards} id="historial">
         <h2 className={styles.sectionTitle}>QRs anteriores</h2>
         {history.length===0 ? (

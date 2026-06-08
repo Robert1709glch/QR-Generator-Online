@@ -34,6 +34,11 @@
   color: var(--color-text);
 }
 
+.logoImage{
+  width: 60px;
+  height: auto;
+}
+
 /* Nav */
 .nav {
   display: flex;
